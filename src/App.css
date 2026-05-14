@@ -1,0 +1,93 @@
+/* src/App.css */
+
+/* Fondo general de la aplicación */
+.app-wrapper {
+  min-height: 100vh;
+  background-color: #f8fafc; /* Un gris/azulado muy claro y moderno */
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Contenedor central */
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Barra de navegación superior */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin-bottom: 40px;
+}
+
+.app-title-group h1 {
+  margin: 0 0 10px 0;
+  color: #1a202c;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+/* Etiqueta del usuario conectado */
+.user-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #edf2f7;
+  color: #4a5568;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #e2e8f0;
+}
+
+.user-badge strong {
+  color: #2b6cb0; /* Azul corporativo para resaltar el rol */
+  margin-left: 5px;
+}
+
+/* Botón de cerrar sesión */
+.logout-button {
+  padding: 12px 20px;
+  background-color: #fc8181; /* Rojo suave inicial */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(252, 129, 129, 0.25);
+}
+
+.logout-button:hover {
+  background-color: #e53e3e; /* Rojo intenso al pasar el mouse */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(229, 62, 62, 0.35);
+}
+
+.logout-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(229, 62, 62, 0.2);
+}
+
+/* Centrado para la pantalla de login inicial */
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.login-wrapper h1 {
+  color: #1a202c;
+  font-size: 32px;
+  margin-bottom: 10px;
+}

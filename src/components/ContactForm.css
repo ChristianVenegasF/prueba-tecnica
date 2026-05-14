@@ -1,0 +1,143 @@
+/* src/components/ContactForm.css */
+
+.contact-container {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 35px 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06), 0 2px 10px rgba(0, 0, 0, 0.04);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-container:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+.contact-container h2 {
+  text-align: center;
+  color: #2d3748;
+  font-size: 26px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #edf2f7;
+  font-weight: 700;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* Espacio automático entre todos los campos */
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-field input,
+.contact-field select {
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #2d3748;
+  background-color: #f7fafc;
+  transition: all 0.3s ease;
+}
+
+/* Efecto de foco en los inputs */
+.contact-field input:focus,
+.contact-field select:focus {
+  outline: none;
+  border-color: #4299e1;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.contact-field input:disabled,
+.contact-field select:disabled {
+  background-color: #edf2f7;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.field-error-text {
+  color: #e53e3e;
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Alertas de Éxito y Error */
+.contact-api-error {
+  background-color: #fff5f5;
+  color: #c53030;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid #f56565;
+  margin-bottom: 20px;
+  font-size: 14px;
+  animation: fadeIn 0.4s ease;
+}
+
+.contact-success-msg {
+  background-color: #f0fff4;
+  color: #2f855a;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid #48bb78;
+  margin-bottom: 20px;
+  font-size: 14px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Botón moderno */
+.contact-button {
+  margin-top: 10px;
+  padding: 15px;
+  background: linear-gradient(135deg, #4299e1 0%, #2b6cb0 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(66, 153, 225, 0.3);
+}
+
+.contact-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(66, 153, 225, 0.4);
+  background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+}
+
+.contact-button:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(66, 153, 225, 0.3);
+}
+
+.contact-button:disabled {
+  background: #a0aec0;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

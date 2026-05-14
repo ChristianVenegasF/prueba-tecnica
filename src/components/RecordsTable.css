@@ -1,0 +1,142 @@
+/* src/components/RecordsTable.css */
+
+.table-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin-top: 30px;
+}
+
+.table-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #2d3748;
+  font-size: 22px;
+  border-bottom: 2px solid #edf2f7;
+  padding-bottom: 15px;
+  font-weight: 700;
+}
+
+/* Zona de filtros */
+.table-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.table-search {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #2d3748;
+  background-color: #f7fafc;
+  transition: all 0.3s ease;
+}
+
+.table-select {
+  flex: 0 0 200px;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #2d3748;
+  background-color: #f7fafc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.table-search:focus, .table-select:focus {
+  outline: none;
+  border-color: #4299e1;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+/* Estilos de la tabla */
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.records-table th {
+  background-color: #f7fafc;
+  color: #4a5568;
+  padding: 16px 15px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.records-table td {
+  padding: 16px 15px;
+  color: #2d3748;
+  border-bottom: 1px solid #edf2f7;
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+/* Efecto al pasar el mouse por las filas */
+.records-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.row-clickable:hover {
+  background-color: #ebf8ff; /* Azul muy clarito */
+  cursor: pointer;
+}
+
+/* Píldoras de Estado (Badges) */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.status-activo { background-color: #c6f6d5; color: #22543d; }
+.status-inactivo { background-color: #fed7d7; color: #742a2a; }
+.status-pendiente { background-color: #feebc8; color: #7b341e; }
+
+/* Botones de Acción */
+.action-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-activate { background-color: #48bb78; }
+.btn-activate:hover { background-color: #38a169; transform: translateY(-1px); }
+
+.btn-deactivate { background-color: #e53e3e; }
+.btn-deactivate:hover { background-color: #c53030; transform: translateY(-1px); }
+
+/* Estados de carga y error */
+.table-message {
+  text-align: center;
+  padding: 50px;
+  color: #718096;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.table-error-msg {
+  color: #e53e3e;
+  background-color: #fff5f5;
+  border-radius: 8px;
+}
