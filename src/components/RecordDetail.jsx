@@ -1,6 +1,6 @@
 // src/components/RecordDetail.jsx
 import React from 'react';
-import './RecordDetail.css'; // <-- Importamos los estilos
+import './RecordDetail.css'; 
 
 const RecordDetail = ({ record, onBack }) => {
   return (
