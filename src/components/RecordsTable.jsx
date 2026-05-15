@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import RecordDetail from './RecordDetail';
 import { getRecords, updateRecordStatus } from '../services/recordsService'; 
 import { checkPermission, PERMISSIONS } from '../utils/permissions';
-import './RecordsTable.css'; // <-- 1. Importamos el CSS
+import './RecordsTable.css'; 
 
 const RecordsTable = ({ refreshKey, userRole }) => {
   const [records, setRecords] = useState([]); 
